@@ -64,7 +64,7 @@ int nBest, const bool bScores, const bool bBinary) {
    o_conll = new CCoNLLOutput[nBest];
    // Read the next example
    if (cInputFormat=='c')
-      bReadSuccessful = ((*is)>>con_input);
+      bReadSuccessful = (bool)((*is)>>con_input);
    else
       bReadSuccessful = input_reader->readTaggedSentence(&raw_input, false, TAG_SEPARATOR);
    while( bReadSuccessful ) {
@@ -112,7 +112,7 @@ int nBest, const bool bScores, const bool bBinary) {
 
       // Read the next example
       if (cInputFormat=='c')
-         bReadSuccessful = ((*is)>>con_input);
+         bReadSuccessful = (bool)((*is)>>con_input);
       else
          bReadSuccessful = input_reader->readTaggedSentence(&raw_input, false, TAG_SEPARATOR);
    }

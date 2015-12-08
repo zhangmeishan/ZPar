@@ -82,7 +82,7 @@ void process(const std::string sInputFile, const std::string sOutputFile, const 
 
    // Read the next example
    if (bCoNLL)
-      bReadSuccessful = ( (*is) >> input_conll );
+      bReadSuccessful = (bool)( (*is) >> input_conll );
    else
 #ifdef JOINT_MORPH
 	  bReadSuccessful = input_reader->readRawSentence(&input_sent, false, true);
@@ -135,7 +135,7 @@ void process(const std::string sInputFile, const std::string sOutputFile, const 
 
       // Read the next example
       if (bCoNLL)
-         bReadSuccessful = ( (*is) >> input_conll );
+         bReadSuccessful = (bool)( (*is) >> input_conll );
       else
 #ifdef JOINT_MORPH
 	  bReadSuccessful = input_reader->readRawSentence(&input_sent, false, true);
