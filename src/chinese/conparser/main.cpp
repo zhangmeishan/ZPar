@@ -98,7 +98,7 @@ void process(const std::string &sInputFile, const std::string &sOutputFile, cons
 				if (bBinary)
 					os << output_sent[i] ;
 				else
-					os << output_sent[i].str_unbinarized() << std::endl;
+					os << output_sent[i].str_unbinarizedall() << std::endl;
 				if (bScores) *os_scores << scores[i] << std::endl;
 			}
       }
