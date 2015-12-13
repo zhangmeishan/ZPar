@@ -6,7 +6,7 @@
 namespace chinese {
 
 #ifndef CHINESE_DEP_SET
-#define CHINESE_DEP_SET ctb
+#define CHINESE_DEP_SET empty
 #endif
 
 #ifdef LABELED
@@ -14,7 +14,7 @@ namespace chinese {
 #include INCLUDE_FILE(CHINESE_DEP_SET)
 #undef INCLUDE_FILE
 #endif
-#define INCLUDE_FILE(M) MACROTOSTRING(dependency/rules/M.h)
+#define INCLUDE_FILE(M) MACROTOSTRING(dependency/rules/ctb.h)
 #include INCLUDE_FILE(CHINESE_DEP_SET)
 #undef INCLUDE_FILE
 
